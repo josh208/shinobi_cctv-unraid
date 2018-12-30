@@ -70,7 +70,6 @@ if [ -n "${MYSQL_ROOT_USER}" ]; then
         echo "Create database user if it does not exists ..."
         mysql -u $MYSQL_ROOT_USER -p$MYSQL_ROOT_PASSWORD -h $MYSQL_HOST -e "source ./sql_temp/user.sql" || true
 
-        rm -rf sql_temp
     fi
 fi
 
