@@ -31,7 +31,7 @@ RUN echo "deb http://ftp.debian.org/debian jessie-backports main" >> /etc/apt/so
 
 # Clone the Shinobi CCTV PRO repo
 RUN mkdir master_temp
-RUN git clone https://github.com/ShinobiCCTV/Shinobi.git master_temp
+RUN git clone https://gitlab.com/Shinobi-Systems/Shinobi.git master_temp
 RUN cp -R -f master_temp/* .
 RUN rm -rf $distro master_temp
 
