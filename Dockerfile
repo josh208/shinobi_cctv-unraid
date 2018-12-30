@@ -3,15 +3,15 @@
 #
 FROM node:8
 
-LABEL Author="MiGoller"
+LABEL Author="josh208"
 
 # Set environment variables to default values
 ENV ADMIN_USER=admin@shinobi.video \
     ADMIN_PASSWORD=administrator \
-    CRON_KEY=fd6c7849-904d-47ea-922b-5143358ba0de \
-    PLUGINKEY_MOTION=b7502fd9-506c-4dda-9b56-8e699a6bc41c \
-    PLUGINKEY_OPENCV=f078bcfe-c39a-4eb5-bd52-9382ca828e8a \
-    PLUGINKEY_OPENALPR=dbff574e-9d4a-44c1-b578-3dc0f1944a3c \
+    CRON_KEY=$(uuidgen) \
+    PLUGINKEY_MOTION=$(uuidgen) \
+    PLUGINKEY_OPENCV=$(uuidgen) \
+    PLUGINKEY_OPENALPR=$(uuidgen) \
     MOTION_HOST=localhost \ 
     MOTION_PORT=8080 
 
